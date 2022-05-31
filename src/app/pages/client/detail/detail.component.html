@@ -1,0 +1,43 @@
+<main class="content">
+  <div class="detail grid wide row">
+      <div class="detail__main l-8 m-12 c-12">
+        <a [routerLink]="['/']" >
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" style="margin-top: 10px; width: 40px" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M11 17l-5-5m0 0l5-5m-5 5h12" />
+          </svg>
+        </a>
+          <div class="main-text">
+              <p class="text-name">{{product?.name}}</p>
+              <p class="text-price">{{product?.price?.toLocaleString('vn-VN')}}</p>
+          </div>
+          <div class="main-img">
+              <img [src]="product?.image" alt="image">
+          </div>
+      </div>
+      <div class="detail__content l-4 m-12 c-12">
+          <div class="content-info">
+              <h5 class="content-title">Chi tiết sản phẩm</h5>
+              <p class="info-text">{{product?.description}}</p>
+
+          </div>
+          <div class="content-add">
+              <div class="quantity">
+                  <div class="minus">
+                      <i class="fas fa-minus"></i>
+                  </div>
+                  <div class="number">
+                      <input type="text" name="" id="inp" value="1">
+                  </div>
+                  <div class="plus">
+                      <i class="fas fa-plus"></i>
+                  </div>
+              </div>
+              <div class="add">
+                  <button>Thêm vào giỏ hàng</button>
+              </div>
+          </div>
+      </div>
+  </div>
+  <!-- end detail -->
+
+</main>
