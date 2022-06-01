@@ -19,9 +19,9 @@ export class FormProductComponent implements OnInit {
   ) {
     this.productForm = new FormGroup({
       name: new FormControl('', Validators.required),
-      img: new FormControl('', Validators.required),
+      image: new FormControl('', Validators.required),
       price: new FormControl(0, Validators.required),
-      desc: new FormControl('', Validators.required),
+      description: new FormControl('', Validators.required),
       status: new FormControl(0, Validators.required),
     })
    }
@@ -36,10 +36,10 @@ export class FormProductComponent implements OnInit {
     else {
       this.productDetail = {
         name: '',
-        img: '',
+        image: '',
         price: 0,
         status: 0,
-        desc: ''
+        description: ''
       }
     }
   }

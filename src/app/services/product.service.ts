@@ -15,16 +15,16 @@ export class ProductService {
     return this.http.get(`${apiURL}/products`)
   }
   getProduct(id:any): Observable<any>{
-    return this.http.get(`${apiURL}//product/${id}`)
+    return this.http.get(`${apiURL}/product/${id}`)
   }
 
   create(data: any): Observable<any> {
-    return this.http.post(apiURL, data)
+    return this.http.post(`${apiURL}/product`, data)
   }
   remove(id:any): Observable<any>{
-    return this.http.delete(`${apiURL}/${id}`)
+    return this.http.delete(`${apiURL}/product/${id}`)
   }
   update(id:any , data:any): Observable<any>{
-    return this.http.put(`${apiURL}/${id}`, data)
+    return this.http.put(`${apiURL}/product/${id}`, data)
   }
 }

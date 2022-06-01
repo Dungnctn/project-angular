@@ -15,19 +15,19 @@
               </tr>
           </thead>
           <tbody>
-              <tr *ngFor="let product of products" >
-                  <td>{{product.id}}</td>
+              <tr *ngFor="let product of products; let i = index" >
+                  <td>{{i + 1}}</td>
                   <td>{{product.name}}</td>
-                  <td><img [src]='product.img' alt="" width='100px' /></td>
+                  <td><img [src]='product.image' alt="" width='100px' /></td>
                   <td>{{product.price}}</td>
                   <td>
                     <app-status
                     [status]="product.status"
-                    (changeStatus)="parebtChangeStatus($event, product.id)"
+                    (changeStatus)="parebtChangeStatus($event, product._id)"
                   ></app-status>
                   </td>
                   <td>
-                      <button class='btn-delete' (click)="onRemove(product.id)">
+                      <button class='btn-delete' (click)="onRemove(product._id)">
                           <span class='text'>Delete</span>
                           <span class='icon'>
                               <i class='bx bx-x'></i>
@@ -36,7 +36,7 @@
                   </td>
                   <td>
                       <button class='btn-edit'>
-                        <a routerLink="{{product.id}}/edit" class="btn-link">Edit</a>
+                        <a routerLink="{{product._id}}/edit" class="btn-link">Edit</a>
                       </button>
                   </td>
               </tr>
